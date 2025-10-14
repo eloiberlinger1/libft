@@ -6,24 +6,24 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 20:52:43 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/14 09:10:22 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/14 09:47:20 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char *return_zero_string_in_less_than_25_lines()
+char	*return_zero_string_in_less_than_25_lines(void)
 {
-	char *ret;
+	char	*ret;
+
 	ret = (char *) malloc(1 * sizeof(char));
-	if(ret == NULL)
+	if (ret == NULL)
 		return (NULL);
 	ret[0] = '\0';
 	return (ret);
 }
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	sub_len;
@@ -33,13 +33,13 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
-	if(start > s_len)
+	if (start > s_len)
 		return (return_zero_string_in_less_than_25_lines());
 	sub_len = s_len - start;
-	if(sub_len > len)
+	if (sub_len > len)
 		sub_len = len;
 	ret = (char *) malloc((sub_len + 1) * sizeof(char));
-	if(ret == NULL)
+	if (ret == NULL)
 		return (NULL);
 	i = 0;
 	while (i < sub_len && i < len)
@@ -50,10 +50,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	ret[i] = '\0';
 	return (ret);
 }
-
-int main()
-{
-	char test[] = "bonjour";
-	
-	printf("%s\n", ft_substr(test, 2, 4));
-}
+// int main()
+// {
+// 	char test[] = "bonjour";
+// 	printf("%s\n", ft_substr(test, 2, 4));
+// }
