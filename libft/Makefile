@@ -25,7 +25,9 @@ C_FILES = ft_atoi.c \
 			ft_tolower.c \
 			ft_toupper.c \
 			ft_substr.c \
-			ft_strjoin.c
+			ft_strjoin.c \
+			ft_strtrim.c \
+			ft_split.c
 
 O_FILES = $(C_FILES:.c=.o)
 
