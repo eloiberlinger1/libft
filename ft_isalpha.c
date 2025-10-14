@@ -6,13 +6,13 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 21:21:05 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/09 11:03:07 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/13 19:54:38 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(char c)
 {
-	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}

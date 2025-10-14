@@ -6,11 +6,10 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 09:20:42 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/13 11:00:38 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/13 11:03:55 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t destsize)

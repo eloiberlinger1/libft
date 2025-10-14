@@ -6,16 +6,14 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 13:00:19 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/13 11:01:14 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/13 20:02:55 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *str, int ch)
 {
-	char	*ret;
 	int		i;
 
 	i = ft_strlen(str);

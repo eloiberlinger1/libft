@@ -6,19 +6,17 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 22:53:36 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/13 11:00:58 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/13 20:02:44 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int		i;
-	int		n;
-	int		needle_len;
-	char	*ret;
+	size_t	i;
+	size_t	n;
+	size_t	needle_len;
 
 	if (needle[0] == '\0')
 		return ((char *)(haystack));

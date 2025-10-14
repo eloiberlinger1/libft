@@ -6,11 +6,11 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 11:35:34 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/10 11:56:34 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/13 11:03:41 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t size)
 {

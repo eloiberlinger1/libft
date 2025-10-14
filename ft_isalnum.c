@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:08:21 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/09 11:10:04 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/13 19:54:20 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_isdigit(char c)
 
 int	ft_isalpha(char c)
 {
-	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+	if ((c >= 'a' && c <= 'z' ) || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}

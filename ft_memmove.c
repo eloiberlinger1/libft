@@ -6,11 +6,11 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 16:57:06 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/11 17:04:07 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/13 11:03:45 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

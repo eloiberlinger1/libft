@@ -1,27 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/12 13:46:31 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/13 19:56:24 by eberling         ###   ########.fr       */
+/*   Created: 2025/10/13 13:03:16 by eberling          #+#    #+#             */
+/*   Updated: 2025/10/13 14:08:54 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memchr(const void *ptr, int value, size_t num)
+char	*ft_strdup(const char *s)
 {
-	size_t			i;
-	unsigned char	*nptr;
+	size_t		len;
+	size_t		i;
+	char		*ret;
 
-	nptr = (unsigned char *)ptr;
+	len = ft_strlen(s);
+	ret = (char *) malloc(len * sizeof(char));
+	if(ret == NULL)
+		return (NULL);
 	i = 0;
-	while (i < num && nptr[i] != value)
+	while (i < len)
+	{
+		ret[i] = s[i];
 		i++;
-	if (nptr[i] == value)
-		return ((void *)&nptr[i]);
-	return (NULL);
+	}
+	ret[i] = '\0';
+	return (ret);
 }
+
+// #include <stdio.h>
+
+// int main()
+// {
+// 	char test[] = "dadaskndkla";
+
+// 	char *test2 = ft_strdup(test);
+
+// 	printf("%s\n", test2);
+// }

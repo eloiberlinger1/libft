@@ -6,11 +6,11 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 17:43:26 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/09 18:07:40 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/13 11:03:49 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 13:08:04 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/12 13:44:05 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/13 11:04:03 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	strncmp(const char *str1, const char *str2, size_t n)
 {
