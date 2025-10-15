@@ -24,21 +24,18 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y git
 
-      # Étape 3: Cloner Francinette
+      # Étape 3: Install Francinette
       - name: Clone Francinette
         run: |
-          git clone https://github.com/xicodomingues/francinette.git ~/francinette
-          cd ~/francinette
-          # Facultatif: Assurez-vous d'avoir la dernière version stable si vous ne voulez pas la 'main'
-          # git checkout <tag_de_version> 
+          bash -c "$(curl -fsSL https://raw.github.com/xicodomingues/francinette/master/bin/install.sh)"
 
       # Étape 4: Lancer les tests
       # NOTE: Le répertoire de votre Libft doit être à la racine de votre dépôt.
       # L'option '-f' force l'exécution même sans 'git pull' récent.
       # Le drapeau '--no-verbose' est optionnel pour des logs plus concis.
       - name: Run Francinette Tests
-        # L'environnement de travail par défaut pour les étapes suivantes est la racine du dépôt cloné.
         run: |
-          ~/francinette/francinette.sh -f --no-verbose
-        # Vous pouvez ajouter un 'if: always()' si vous voulez que les étapes suivantes s'exécutent 
-        # même si les tests échouent, mais ici on veut que l'Action échoue si les tests échouent.
+          francinette
+      - name: Run PACO Tests
+        run: |
+          paco
