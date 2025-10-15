@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:07:26 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/15 09:21:35 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/15 09:40:54 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_itoa(int n)
 
 	n = (long long) n;
 	ret = (char *) malloc(get_char_size(n) + 1);
+	if (!ret)
+		return (NULL);
 	i = get_char_size(n);
 	ret[i] = '\0';
 	if (n < 0)
