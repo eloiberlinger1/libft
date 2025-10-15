@@ -6,63 +6,62 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:07:26 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/14 22:02:41 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/15 09:21:35 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void strrev(char *s)
+size_t	get_char_size(long long n)
 {
-	size_t s_len;
-	size_t i;
-	char temp;
+	int	c;
 
-	i = 0;
-	s_len = ft_strlen(s);
-	while (i < s_len)
+	c = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
 	{
-		temp = s[i];
-		s[i] = s[s_len - i];
-		s[s_len - i] = temp;
-		i++;
+		c++;
+		n = -n;
 	}
-	s[i] = '\0';
+	while (n > 0)
+	{
+		n = n / 10;
+		c++;
+	}
+	return (c);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*ret;
 	int		digit;
-	int		c;
 	int		b;
-	int		i;
+	size_t	i;
 
-	c = 0;
-	if(n < 0)
-		digit = -1;
-	b = n;
-	while (n > 0)
-	{
-		n = n/10;
-		c++;
-	}
-	n = b;
-	ret = (char *) malloc(c + 1);
-	i = 0;
-	while (n > 0)
-	{
-		ret[i++] = n%10 + '0';
-		n = n/10;
-	}
+	n = (long long) n;
+	ret = (char *) malloc(get_char_size(n) + 1);
+	i = get_char_size(n);
 	ret[i] = '\0';
-	strrev(ret);
+	if (n < 0)
+	{
+		ret[0] = '-';
+		n = -n;
+	}
+	while (n > 0)
+	{
+		i--;
+		ret[i] = n % 10 + '0';
+		n = n / 10;
+	}
 	return (ret);
 }
 
-int main()
-{
-    int test = 123;
-    printf("%s\n", ft_itoa(test));
-}
+// int main()
+// {
+// 	int test = 123;
+//     printf("%s\n", ft_itoa(test));
+// 	test = -5465;
+//     printf("%s\n", ft_itoa(test));
+
+// }
