@@ -34,11 +34,15 @@ C_FILES = ft_atoi.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c
+			ft_putnbr_fd.c \
+
+			ft_lstnew.c
 
 O_FILES = $(C_FILES:.c=.o)
 
 all: $(LIBNAME)
+
+bonus: 
 
 $(LIBNAME) : $(O_FILES)
 	ar rc $(LIBNAME) $(O_FILES)

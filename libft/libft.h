@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:39:44 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/15 12:50:24 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:50:41 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,13 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+// BONUS part
+t_list	*ft_lstnew(void *content);
+
+ typedef struct	s_list
+	{
+	void *content;
+	struct s_list *next;
+	}	t_list;
 
 #endif
