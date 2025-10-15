@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:07:26 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/15 09:40:54 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/15 10:50:28 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,4 @@ char	*ft_itoa(int n)
 //     printf("%s\n", ft_itoa(test));
 // 	test = -5465;
 //     printf("%s\n", ft_itoa(test));
-
 // }

@@ -6,22 +6,22 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 09:26:34 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/15 09:54:50 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/15 10:50:41 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
 	char	*ret;
 
-	if(!s || !f)
+	if (!s || !f)
 		return (NULL);
 	i = 0;
 	ret = (char *) malloc(ft_strlen(s) + 1);
-	if(!ret)
+	if (!ret)
 		return (NULL);
 	while (s[i] != '\0')
 	{
