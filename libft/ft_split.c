@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:08:33 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/14 17:03:17 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:20:15 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ char	**ft_split(char const *s, char c)
 {
 	int			words;
 	char		**ret;
-	int			j;
 
 	if (!s)
 		return (NULL);

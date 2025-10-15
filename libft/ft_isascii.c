@@ -6,15 +6,11 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:13:22 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/09 11:13:56 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:18:45 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(char c)
 {
-	if (c >= 0 && c <= 127)
-	{
-		return (1);
-	}
-	return (0);
+	return (c >= 0 && (unsigned char) c <= 127);
 }

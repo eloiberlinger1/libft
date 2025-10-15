@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:07:26 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/15 10:50:28 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:22:44 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ size_t	get_char_size(long long n)
 char	*ft_itoa(int n)
 {
 	char	*ret;
-	int		digit;
-	int		b;
 	size_t	i;
 
 	n = (long long) n;
