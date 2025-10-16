@@ -21,11 +21,9 @@ jobs:
 
       - name: Install Norminette
         run: |
-          sudo apt install python3-setuptools
-          sudo apt install pipx
+          sudo apt-get install -y python3-setuptools pipx
           pipx install norminette
-          ensurepath
-          python3 -m pip install --upgrade norminette
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Install Francinette
         run: |
