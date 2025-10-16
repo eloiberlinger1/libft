@@ -31,11 +31,12 @@ jobs:
 
       # Étape 4: Lancer les tests
       # NOTE: Le répertoire de votre Libft doit être à la racine de votre dépôt.
-      # L'option '-f' force l'exécution même sans 'git pull' récent.
-      # Le drapeau '--no-verbose' est optionnel pour des logs plus concis.
       - name: Run Francinette Tests
+        # Utilisez le chemin explicite !
         run: |
-          francinette
+          ~/francinette/francinette.sh
       - name: Run PACO Tests
         run: |
           paco
+
+
