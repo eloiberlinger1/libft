@@ -31,9 +31,8 @@ jobs:
           cd "$HOME/francinette"
           ./bin/install.sh
 
-
       - name: Run Francinette Tests
         run: |
           cd $GITHUB_WORKSPACE
-          "$HOME/francinette/tester.sh" -f
+          "$HOME/francinette/tester.sh"
 
