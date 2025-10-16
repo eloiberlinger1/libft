@@ -1,4 +1,4 @@
-LIBNAME = libft.a
+NAME = libft.a
 CC = cc
 CFLAGS = -Wextra -Wall -Werror
 
@@ -12,19 +12,19 @@ C_BONUS_FILES = ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_
 O_FILES = $(C_FILES:.c=.o)
 O_BONUS_FILES = $(C_BONUS_FILES:.c=.o)
 
-all: $(LIBNAME)
+all: $(NAME)
 
-$(LIBNAME) : $(O_FILES)
-	ar rcs $(LIBNAME) $(O_FILES)
+$(NAME) : $(O_FILES)
+	ar rcs $(O_FILES) -o $(NAME)
 
 bonus: $(O_BONUS_FILES) $(O_FILES)
-	ar rcs $(LIBNAME) $(O_FILES) $(O_BONUS_FILES)
+	ar rcs $(NAME) $(O_FILES) $(O_BONUS_FILES)
 
 clean:
 	rm -f *.o
 
 fclean:
-	rm -f $(LIBNAME)
+	rm -f $(NAME)
 
 re: fclean all
 

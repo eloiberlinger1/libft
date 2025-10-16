@@ -1,22 +1,17 @@
-name: Test Libft avec PACO
+name: Test Libft avec Francinette
 
-# Déclenche le workflow à chaque push sur n'importe quelle branche
 on: [push]
 
 jobs:
   test_libft:
-    # Utilise un runner Linux (comme Ubuntu) pour l'exécution
     runs-on: ubuntu-latest
 
     steps:
-      # Étape 1: Cloner votre dépôt (votre code Libft)
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          # Permet de cloner les sous-modules si vous en avez (même si peu probable pour Libft)
           submodules: true
 
-      # Étape 2: Installer les dépendances nécessaires
       - name: Install Dependencies
         run: |
           # Francinette peut nécessiter 'make', 'gcc', etc., déjà présents sur ubuntu-latest,
@@ -24,19 +19,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y git
 
-      # Étape 3: Install Francinette
       - name: Clone Francinette
         run: |
-          bash -c "$(curl -fsSL https://raw.github.com/xicodomingues/francinette/master/bin/install.sh)"
+          git clone https://github.com/xicodomingues/francinette.git "$HOME/francinette"
 
-      # Étape 4: Lancer les tests
-      # NOTE: Le répertoire de votre Libft doit être à la racine de votre dépôt.
+
       - name: Run Francinette Tests
-        # Utilisez le chemin explicite !
         run: |
-          ~/francinette/francinette.sh
-      - name: Run PACO Tests
-        run: |
-          paco
-
+          $HOME/francinette/tester.sh $GITHUB_WORKSPACE
 
