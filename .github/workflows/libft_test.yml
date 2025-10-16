@@ -19,12 +19,23 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y git
 
-      - name: Clone Francinette
+      - name: Install Norminette
+        run: |
+          sudo apt install python3-setuptools
+          sudo apt install pipx
+          pipx install norminette
+          ensurepath
+          python3 -m pip install --upgrade norminette
+
+      - name: Install Francinette
         run: |
           git clone https://github.com/xicodomingues/francinette.git "$HOME/francinette"
+          cd "$HOME/francinette"
+          ./bin/install.sh
 
 
       - name: Run Francinette Tests
         run: |
-          $HOME/francinette/tester.sh $GITHUB_WORKSPACE
+          cd $GITHUB_WORKSPACE
+          "$HOME/francinette/tester.sh" -f
 
