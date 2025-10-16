@@ -6,16 +6,16 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:56:56 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/16 13:05:58 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:53:15 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!lst || !del)
-        return;
+		return ;
 	dle(lst->content);
 	free(lst);
 }
