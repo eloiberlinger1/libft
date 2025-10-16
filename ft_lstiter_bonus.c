@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:15:56 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/16 15:19:05 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:48:58 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,18 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+
+// #include <stdio.h>
+// void test(void *c)
+// {
+// 	printf("-> NODE content = %s\n", (char *)c);
+// }
+
+// int main()
+// {
+// 	t_list *node1 = ft_lstnew("BONJOUR1");
+// 	ft_lstadd_back(&node1, ft_lstnew("BONJOUR2"));
+// 	ft_lstadd_back(&node1, ft_lstnew("BONJOUR3"));
+
+// 	ft_lstiter(node1, test);
+// }
