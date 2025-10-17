@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:03:16 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/14 10:08:49 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 18:36:38 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s)
 	char		*ret;
 
 	len = ft_strlen(s);
-	ret = (char *) malloc(len * sizeof(char));
+	ret = (char *) malloc((len + 1) * sizeof(char));
 	if (ret == NULL)
 		return (NULL);
 	i = 0;
