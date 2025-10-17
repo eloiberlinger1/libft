@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:07:26 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/15 13:22:44 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 18:59:58 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,26 @@ size_t	get_char_size(long long n)
 	}
 	while (n > 0)
 	{
-		n = n / 10;
+		n /= 10;
 		c++;
 	}
 	return (c);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(int nb)
 {
-	char	*ret;
-	size_t	i;
+	char		*ret;
+	long long	n;
+	size_t		i;
 
-	n = (long long) n;
-	ret = (char *) malloc(get_char_size(n) + 1);
+	n = (long long) nb;
+	i = get_char_size(n);
+	ret = (char *) malloc((i + 1) * sizeof(char));
 	if (!ret)
 		return (NULL);
-	i = get_char_size(n);
 	ret[i] = '\0';
+	if (n == 0)
+		ret[0] = '0';
 	if (n < 0)
 	{
 		ret[0] = '-';
@@ -51,15 +54,16 @@ char	*ft_itoa(int n)
 	while (n > 0)
 	{
 		i--;
-		ret[i] = n % 10 + '0';
-		n = n / 10;
+		ret[i] = (n % 10) + '0';
+		n /= 10;
 	}
 	return (ret);
 }
 
+// #include <stdio.h>
 // int main()
 // {
-// 	int test = 123;
+// 	int test = -2147483648;
 //     printf("%s\n", ft_itoa(test));
 // 	test = -5465;
 //     printf("%s\n", ft_itoa(test));
