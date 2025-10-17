@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:56:56 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/16 15:53:15 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 09:24:46 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!lst || !del)
 		return ;
-	dle(lst->content);
+	del(lst->content);
 	free(lst);
 }

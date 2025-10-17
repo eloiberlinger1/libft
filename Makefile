@@ -16,7 +16,7 @@ O_BONUS_FILES = $(C_BONUS_FILES:.c=.o)
 all: $(NAME)
 
 $(NAME) : $(O_FILES)
-	ar rcs $(O_FILES) -o $(NAME)
+	ar rcs $(NAME) $(O_FILES)
 
 bonus: $(O_BONUS_FILES) $(O_FILES)
 	ar rcs $(NAME) $(O_FILES) $(O_BONUS_FILES)
