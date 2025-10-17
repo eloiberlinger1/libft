@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 13:00:19 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/17 12:22:02 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 14:25:51 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,4 @@ char	*ft_strrchr(const char *str, int ch)
 // 	char string[] = "jbonjour";
 
 // 	printf("%s\n", ft_strrchr("xteste", 'x'));
-	
 // }

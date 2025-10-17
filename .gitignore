@@ -1,5 +1,4 @@
-a.out
 *.out
 *.a
-*/.vscode/
+*.vscode/
 .DS_STORE/

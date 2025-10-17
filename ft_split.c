@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:08:33 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/15 13:20:15 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 14:40:17 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,18 @@ int	get_wordsize(const char *s, char c, int i)
 	int	wordsize;
 
 	wordsize = 0;
-	while (s[i + wordsize] != c)
+	while (s[i + wordsize] != c && s[i + wordsize] != '\0')
 		wordsize++;
 	return (wordsize);
+}
+
+void free_words(char **ret, int w)
+{
+	while (w-- > 0)
+	{
+		free(ret[w]);
+	}
+	free(ret);
 }
 
 void	write_words(const char *s, int words, char c, char **ret)
@@ -56,7 +65,12 @@ void	write_words(const char *s, int words, char c, char **ret)
 			i++;
 		j = 0;
 		wordsize = get_wordsize(s, c, i);
-		ret[w] = (char *) malloc(wordsize * sizeof(char));
+		ret[w] = (char *) malloc((wordsize + 1) * sizeof(char));
+		if (!ret[w])
+		{
+			free_words(ret, w);
+			return ;
+		}
 		while (j < wordsize)
 			ret[w][j++] = s[i++];
 		ret[w][j] = '\0';
@@ -73,16 +87,19 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	words = word_count(s, c);
 	ret = (char **) malloc((words + 1) * sizeof(char *));
+	if (!ret)
+		return (NULL);
 	write_words(s, words, c, ret);
+	ret[words] = NULL;
 	return (ret);
 }
 // #include <stdio.h>
 // int main()
 // {
 // 	int i = 0;
-// 	char test[] = "asd;a;sadasd;d;as";
-// 	char **recup = ft_split(test, ';');
-// 	int it = word_count(test, ';');
+// 	char test[] = "hello!";
+// 	char **recup = ft_split(test, 32);
+// 	int it = word_count(test, ' ');
 // 	while(i<it)
 // 	{
 // 		printf("%s\n", recup[i]);
