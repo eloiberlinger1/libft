@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 12:06:28 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/13 19:56:36 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 12:40:58 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,21 @@ char	*ft_strchr(const char *str, int ch)
 	char	*ret;
 
 	ret = (char *)str;
-	while (*ret != ch && *ret != '\0')
+	while (*ret != '\0')
+	{
+		if (*ret == ch)
+			return (ret);
 		ret++;
-	if (*ret == '\0' && ch != '\0')
-		return (NULL);
-	return (ret);
+	}
+	if(ch == '\0')
+		return (ret);
+	return (NULL);
 }
 // #include <stdio.h>
 // int main()
 // {
-// 	char c = 'j';
-// 	char string[] = "jbonjour";
+// 	char c = 'e';
+// 	char string[] = "teste";
 
 // 	printf("%s\n", ft_strchr(string, c));
 // }
