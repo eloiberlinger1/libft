@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 21:31:50 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/17 09:27:22 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 18:33:14 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(char *num)
 	i = 0;
 	while (ft_isspace(num[i]))
 		i++;
-	while (num[i] == '+' || num[i] == '-')
+	if(num[i] == '+' || num[i] == '-')
 	{
 		if (num[i] == '-')
 			digit = digit * (-1);
