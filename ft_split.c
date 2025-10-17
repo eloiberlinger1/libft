@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:08:33 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/17 14:40:17 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 14:57:12 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	get_wordsize(const char *s, char c, int i)
 	return (wordsize);
 }
 
-void free_words(char **ret, int w)
+void	free_words(char **ret, int w)
 {
 	while (w-- > 0)
 	{

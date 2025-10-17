@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 12:06:28 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/17 12:40:58 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 15:00:02 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *str, int ch)
 	ret = (char *)str;
 	while (*ret != '\0')
 	{
-		if (*ret == ch)
+		if (*ret == (char)ch)
 			return (ret);
 		ret++;
 	}
-	if(ch == '\0')
+	if (ch == '\0')
 		return (ret);
 	return (NULL);
 }
