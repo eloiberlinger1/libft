@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:20:25 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/15 12:50:45 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 19:03:42 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	char *num;
+	num = ft_itoa(n);
+	ft_putstr_fd(num, fd);
+	free(num);
 }
 // #include <fcntl.h>  
 // #include <stdio.h>
