@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:49:46 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/13 11:02:55 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 15:23:51 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_strlen(const char *s)
 {
 	int	i;
 
-	if (s == NULL)
-		return (0);
 	i = 0;
 	while (s[i] != '\0')
 		i++;
