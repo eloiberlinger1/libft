@@ -24,7 +24,7 @@ bonus: $(O_BONUS_FILES) $(O_FILES)
 clean:
 	rm -f *.o
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all

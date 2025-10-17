@@ -6,9 +6,11 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:04:00 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/09 11:10:12 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/17 11:05:48 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(char c)
 {
