@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:25:15 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/16 15:51:29 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/18 17:25:58 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,25 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*first;
+	t_list	*new_list_head;
+	t_list	*new_list;
 
-	if (!lst || f || del)
+	if (!lst || !f || !del)
 		return (NULL);
-	first = ft_lstnew(lst->content);
+	new_list_head = NULL;
 	while (lst)
 	{
-		ft_lstadd_front(&first, f(ft_lstnew(lst->content)->content));
+		new_list = ft_lstnew(f(lst->content));
+		if (!new_list)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		if (new_list_head == NULL)
+			new_list_head = new_list;
+		else
+			ft_lstadd_back(&new_list_head, new_list);
 		lst = lst->next;
 	}
-	return (first);
+	return (new_list_head);
 }
