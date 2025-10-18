@@ -22,7 +22,7 @@ bonus: $(O_BONUS_FILES) $(O_FILES)
 	ar rcs $(NAME) $(O_FILES) $(O_BONUS_FILES)
 
 clean:
-	rm -f *.o
+	rm -f $(O_FILES) $(O_BONUS_FILES)
 
 fclean: clean
 	rm -f $(NAME)
