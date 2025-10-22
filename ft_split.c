@@ -6,13 +6,13 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:08:33 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/17 14:57:12 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:52:08 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	word_count(char const *s, char sep)
+static size_t	word_count(char const *s, char sep)
 {
 	int	count;
 
@@ -31,7 +31,7 @@ size_t	word_count(char const *s, char sep)
 	return (count);
 }
 
-int	get_wordsize(const char *s, char c, int i)
+static int	get_wordsize(const char *s, char c, int i)
 {
 	int	wordsize;
 
@@ -41,7 +41,7 @@ int	get_wordsize(const char *s, char c, int i)
 	return (wordsize);
 }
 
-void	free_words(char **ret, int w)
+static void	free_words(char **ret, int w)
 {
 	while (w-- > 0)
 	{
@@ -50,7 +50,7 @@ void	free_words(char **ret, int w)
 	free(ret);
 }
 
-void	write_words(const char *s, int words, char c, char **ret)
+static void	write_words(const char *s, int words, char c, char **ret)
 {
 	int			wordsize;
 	int			i;

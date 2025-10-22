@@ -6,13 +6,13 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 17:07:26 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/17 18:59:58 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:51:03 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_char_size(long long n)
+static size_t	get_char_size(long long n)
 {
 	int	c;
 

@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:39:44 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/17 16:00:43 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:51:30 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_bzero(void *s, size_t size);
 void	*ft_memcpy(void *dest, const void *src, size_t size);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
-void	*memchr(const void *ptr, int value, size_t num);
+void	*ft_memchr(const void *ptr, int value, size_t num);
 char	*ft_strchr(const char *str, int ch);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *str, int ch);

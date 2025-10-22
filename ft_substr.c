@@ -6,13 +6,13 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 20:52:43 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/14 09:47:20 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:52:49 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*return_zero_string_in_less_than_25_lines(void)
+static char	*return_zero_string_in_less_than_25_lines(void)
 {
 	char	*ret;
 
