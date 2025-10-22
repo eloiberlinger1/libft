@@ -6,14 +6,14 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:22 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/14 13:57:17 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/22 19:52:41 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	contains(char c, char *set)
+static int	contains(char c, char *set)
 {
 	while (*set)
 		if (c == *set++)
@@ -21,7 +21,7 @@ int	contains(char c, char *set)
 	return (0);
 }
 
-size_t	get_trim_len(
+static size_t	get_trim_len(
 	char const *s1, char const *set, size_t *start_ret, size_t *end_ret)
 {
 	size_t	trim_len;
