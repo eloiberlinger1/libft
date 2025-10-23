@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:20:25 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/22 21:15:40 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/22 21:17:27 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_putnbr_fd(int n, int fd)
 	int		i;
 	long	nb;
 	char	buffer[11];
-	char	*num;
 
 	nb = n;
 	if (nb == 0)
