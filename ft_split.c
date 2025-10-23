@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:08:33 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/22 19:52:08 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/23 15:05:48 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,17 @@ static int	get_wordsize(const char *s, char c, int i)
 
 static void	free_words(char **ret, int w)
 {
-	while (w-- > 0)
+	int	i;
+
+	i = 0;
+	while (i < w)
 	{
-		free(ret[w]);
+		free(ret[i++]);
 	}
 	free(ret);
 }
 
-static void	write_words(const char *s, int words, char c, char **ret)
+static int	write_words(const char *s, int words, char c, char **ret)
 {
 	int			wordsize;
 	int			i;
@@ -69,13 +72,14 @@ static void	write_words(const char *s, int words, char c, char **ret)
 		if (!ret[w])
 		{
 			free_words(ret, w);
-			return ;
+			return (0);
 		}
 		while (j < wordsize)
 			ret[w][j++] = s[i++];
 		ret[w][j] = '\0';
 		w++;
 	}
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -89,7 +93,8 @@ char	**ft_split(char const *s, char c)
 	ret = (char **) malloc((words + 1) * sizeof(char *));
 	if (!ret)
 		return (NULL);
-	write_words(s, words, c, ret);
+	if (!write_words(s, words, c, ret))
+		return (NULL);
 	ret[words] = NULL;
 	return (ret);
 }
