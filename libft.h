@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:39:44 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/22 19:51:30 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:38:34 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ char	*ft_strrchr(const char *str, int ch);
 char	*ft_strdup(const char *s);
 int		ft_atoi(char *num);
 int		ft_strlen(const char *s);
-int		ft_isalnum(char c);
-int		ft_isalpha(char c);
-int		ft_isascii(char c);
-int		ft_isdigit(char c);
-int		ft_isprint(char c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 int		ft_tolower(int c);

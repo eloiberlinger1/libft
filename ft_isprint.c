@@ -6,15 +6,11 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 11:14:36 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/09 11:15:52 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:40:55 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-	{
-		return (1);
-	}
-	return (0);
+	return (c >= 32 && c <= 126);
 }
