@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 21:31:50 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/22 19:50:22 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/24 12:02:19 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	ft_isspace(char c)
 	return (0);
 }
 
-int	ft_atoi(char *num)
+int	ft_atoi(const char *num)
 {
 	int	digit;
 	int	tt;

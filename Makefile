@@ -18,14 +18,17 @@ all: $(NAME)
 $(NAME) : $(O_FILES)
 	ar rcs $(NAME) $(O_FILES)
 
-bonus: $(O_BONUS_FILES) $(O_FILES)
+bonus: .bonus
+
+.bonus: $(O_BONUS_FILES) $(O_FILES)
 	ar rcs $(NAME) $(O_FILES) $(O_BONUS_FILES)
+	touch .bonus
 
 clean:
 	rm -f $(O_FILES) $(O_BONUS_FILES)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) .bonus
 
 re: fclean all
 
