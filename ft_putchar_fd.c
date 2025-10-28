@@ -6,15 +6,15 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:39:37 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/15 10:52:10 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/28 15:30:05 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	return (write(fd, &c, 1));
 }
 // #include <fcntl.h>  
 // #include <stdio.h>

@@ -6,16 +6,28 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:54:55 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/15 10:57:22 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/28 15:28:47 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
+	int	c;
+	int	t;
+	
+	t = 0;
+	c = 0;
 	while (*s)
-		write(fd, s++, 1);
+	{
+		t == write(fd, s++, 1);
+		if (t != 1)
+			return (-1);
+		c += t;
+		t = 0;
+	}
+	return (c);
 }
 // #include <fcntl.h>  
 // #include <stdio.h>
