@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 11:20:25 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/22 21:17:27 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/27 17:49:47 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_putnbr_fd(int n, int fd)
 	while (i-- > 0)
 		ft_putchar_fd(buffer[i], fd);
 }
-// #include <fcntl.h>  
+// #include <fcntl.h>
 // #include <stdio.h>
 // int main(void)
 // {
