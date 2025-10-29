@@ -6,7 +6,7 @@
 /*   By: eberling <eberling@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:54:55 by eberling          #+#    #+#             */
-/*   Updated: 2025/10/28 15:28:47 by eberling         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:03:27 by eberling         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_putstr_fd(char *s, int fd)
 	c = 0;
 	while (*s)
 	{
-		t == write(fd, s++, 1);
+		t = write(fd, s++, 1);
 		if (t != 1)
 			return (-1);
 		c += t;
